@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-8</title>
+</head>
+<body>
+    <style>
+        * {
+          font-size: medium;
+        }
+        body {
+          display: grid;
+          place-content: center;
+        }
+        table {
+          background: rgb(219, 133, 180);
+          background: linear-gradient(
+            0deg,
+            rgba(219, 133, 180, 1) 12%,
+            rgba(240, 213, 191, 1) 74%,
+            rgba(244, 247, 196, 1) 100%
+          );
+          padding: 1rem 3rem;
+          width: 45rem;
+          height: 40rem;
+          margin: 0 auto;
+        }
+        label {
+          font-weight: bold;
+        }
+        input {
+          width: 70%;
+        }
+        button {
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: red;
+          
+          color: white;
+          font-weight: bold;
+        }
+        #button {
+            text-align: center;
+        }
+      </style>
+    <table>
+        <tr>
+          <td colspan="2">
+            <h1 style="text-align: center; color: blue">Registraion Form</h1>
+          </td>
+        </tr>
+        <tr>
+            <th><label>First Name</label></th>
+            <td><input type="text" id="fn" onkeydown="checkfn()"></td>
+                    <td><span id="fnpop">POOR</span></td>
+        </tr>
+        <tr>
+            <th><label>Last Name</label></th>
+            <td><input type="text" id="ln" onkeyup="checkln()"></td>
+                    <td><span id="lnpop">POOR</span></td>
+        </tr>
+        <tr>
+            <th><label>Email</label></th>
+            <td><input type="email" id="mail" onkeyup="checkmail()"></td>
+                    <td><span id="mailpop">POOR</span></td>
+        </tr>
+        <tr>
+            <th><label>Password</label></th>
+            <td><input type="password" id="pass" onkeyup="checkpass()"></td>
+                    <td><span id="passpop">POOR</span></td>
+        </tr>
+        <tr>
+            <th><label>Re-enter Password</label></th>
+            <td><input type="password" id="repass" onkeyup="checkrepass()"></td>
+                    <td><span id="repasspop">POOR OR MISMATCH</span></td>
+        </tr>
+        <tr>
+            <th><label>Gender:</label></th>
+            <td><input type="radio"  style="width: fit-content">Male<br>
+            <input type="radio" style="width: fit-content">Female</td>
+        </tr>
+        <tr>
+            <th><label>Age:</label></th>
+            <td><input type="number" id="age" onkeyup="checkage()"></td>
+                    <td><span id="agepop">POOR</span></td>
+        </tr>
+        <tr>
+            <th><label>Phone Number</label></th>
+            <td><input type="number" id="phno" onkeyup="checkphno()"></td>
+                    <td><span id="phnopop">POOR</span></td>
+        </tr>
+        <tr>
+            <th><label>Address</label></th>
+            <td ><textarea rows="4" onkeyup="checkadd()" id="add"></textarea></td>
+                    <td><span id="addpop">POOR</span></td>
+        </tr>
+        <tr>
+            <th><label>State</label></th>
+            <td><input type="text" id="state" onkeyup="checkstate()"></td>
+                    <td><span id="statepop">POOR</span></td>
+        </tr>
+        <tr>
+            <th>Country</th>
+            <td><select name="Country">
+                <option selected disabled>Choose your country</option>
+                <option>Finland</option>
+                <option>India</option>
+                <option>Japan</option>
+                <option>United States</option>
+            </select></td>
+        </tr>
+        <tr>
+            <th><label>Languages Known</label></th>
+            <td><input type="checkbox" style="width: fit-content" name="English">
+                <label>English</label>
+                <input type="checkbox" style="width: fit-content" name="Kannda">
+                <label>Kannada</label>
+                <input type="checkbox" style="width: fit-content" name="Hindi">
+                <label>Hindi</label>
+                <input type="checkbox" style="width: fit-content" name="Telugu">
+                <label>Telugu</label>
+            </td>
+        </tr>
+            <tr>
+                <th colspan="2" align="left"><label><input  type="checkbox">Hereby I declare all the given details are true</label></th>
+            </tr>
+        <tr>
+            <th colspan="2" align="right">Log in to <a href="https://ethnus.com/" target="_blank">Ethnus</a>website</th>
+        </tr>
+        <tr>
+          <td id="button" colspan="2">
+            <button>Register</button>
+          </td>
+        </tr>
+      </table>
+      <script src="task-8.js"></script>
+</body>
+</html>
